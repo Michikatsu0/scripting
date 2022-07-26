@@ -5,8 +5,6 @@ using UnityEngine;
 public class Giro : MonoBehaviour
 {
     Transform _transform;
-
-    [SerializeField] private Vector3 rotation;
     [SerializeField] private float degreesPerSeconds;
 
     void Awake()
@@ -19,6 +17,6 @@ public class Giro : MonoBehaviour
     void Update()
     {
 
-        _transform.Rotate(rotation * degreesPerSeconds * Time.deltaTime);
+        _transform.Rotate(0f, degreesPerSeconds * Time.deltaTime, 0f);
     }
 }
